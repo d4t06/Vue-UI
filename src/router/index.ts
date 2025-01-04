@@ -1,7 +1,9 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from "vue-router";
 import Popup from "../pages/popup/PopupPage.vue";
 import Home from "../pages/Home.vue";
-import Provider from "../pages/provider/Provider.vue"
+import Provider from "../pages/provider/Provider.vue";
+import MusicPlayer from "../pages/music-player/Wrapper.vue";
+import TooltipPage from "../pages/tooltip/TooltipPage.vue";
 
 export const routeList = [
   {
@@ -18,6 +20,16 @@ export const routeList = [
     title: "Popup",
     path: "/popup",
     component: Popup,
+  },
+  {
+    title: "Tooltip",
+    path: "/tooltip",
+    component: TooltipPage,
+  },
+  {
+    title: "Music Player",
+    path: "/music-player",
+    component: MusicPlayer,
   },
 ];
 

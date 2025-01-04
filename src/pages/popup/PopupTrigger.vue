@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch } from "vue";
 import Button, { type ButtonProps } from "../../components/Button.vue";
-import { injectPopup } from "./usePopup";
+import { injectPopup } from "./PopupProvider";
 
 type Props = ButtonProps;
 

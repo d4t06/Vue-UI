@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { watch } from "vue";
-import { injectPopup } from "./usePopup";
+import { injectPopup } from "./PopupProvider";
 import { watchEffect } from "vue";
 import PopupContentChild from "./PopupContentChild.vue";
 

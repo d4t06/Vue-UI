@@ -7,3 +7,13 @@ export const setLocalStorage = (key: string, value: any) => {
 
 	return localStorage.setItem("vue-ui", JSON.stringify(storage));
 };
+
+export const formatTime = (time: number) => {
+	const minutes = Math.round(time / 60);
+	const seconds = Math.round(time % 60);
+	return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+};
+
+export const checkDisable = (b: boolean) => {
+	return b ? "disabled" : "";
+};

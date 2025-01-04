@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { injectPopup } from "./usePopup";
+import { injectPopup } from "./PopupProvider";
 
 const { appendTo } = injectPopup();
 </script>

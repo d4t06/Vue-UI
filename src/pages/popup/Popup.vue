@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import PopupProvider from "./usePopup";
+import PopupProvider from "./PopupProvider";
+import { provide } from "vue";
 
 type Props = {
   appendTo?: "parent" | "portal";
@@ -9,7 +10,9 @@ const props = withDefaults(defineProps<Props>(), {
   appendTo: "portal",
 });
 
-PopupProvider(props);
+const { triggerRef, state } = PopupProvider(props);
+
+provide("popup-prop", { triggerRef, state });
 </script>
 
 <template>
