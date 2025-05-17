@@ -63,6 +63,7 @@ const ButtonVariant = cva(
 type TypeProps = VariantProps<typeof ButtonVariant>;
 
 export type ButtonProps = {
+  onClick?: () => void;
   href?: string;
   active?: boolean;
   loading?: boolean;
@@ -79,6 +80,7 @@ export type ButtonProps = {
 
 const {
   href,
+  onClick,
   variant,
   colors,
   size,
@@ -102,6 +104,7 @@ defineExpose({
   <button
     ref="inner"
     v-bind="rest"
+    @click="onClick"
     :disabled="loading || disabled"
     :class="`${ButtonVariant({
       variant,

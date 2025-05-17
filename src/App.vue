@@ -11,11 +11,11 @@ const { isDark } = toRefs(themeStore);
 
 <template>
   <div
-    :class="`flex fixed top-0 bottom-0 w-full ${isDark ? 'bg-[#242424] text-white' : ''}`"
+    :class="`flex fixed inset-0 bottom-0 w-full ${isDark ? 'bg-[#242424] text-white' : ''}`"
   >
     <Sidebar />
     <div
-      class="w-full flex text-white relative flex-col items-center justify-center"
+      class="w-full flex relative flex-col items-center justify-center"
     >
       <RouterView />
     </div>
