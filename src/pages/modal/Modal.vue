@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import { ref, watchEffect, Teleport } from 'vue';
+import { ref, watchEffect, Teleport } from "vue";
 
 type Props = {
   className?: string;
   childClassName?: string;
   persisted?: boolean;
+  wrapper?: boolean;
 };
 
 export type ModalRef = {
@@ -76,9 +77,14 @@ console.log("modal render");
       ${isMounted ? classes.mountedContent : classes.unMountedContent}
 `"
     >
-      <div :class="`${props.childClassName || ' py-3 px-4'} rounded-lg bg-amber-100`">
+      <div
+        v-if="props.wrapper"
+        :class="`${props.childClassName || ' py-3 px-4'} rounded-lg bg-amber-100`"
+      >
         <slot />
       </div>
+
+      <slot v-else />
     </div>
   </Teleport>
 </template>

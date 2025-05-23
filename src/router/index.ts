@@ -8,6 +8,7 @@ import MusicPlayer from "../pages/music-player/Wrapper.vue";
 import TooltipPage from "../pages/tooltip/TooltipPage.vue";
 import SearchBarPage from "../pages/search-bar/index.vue";
 import ModalPage from "../pages/modal/index.vue";
+import ImageModalPage from "../pages/image-modal/index.vue";
 
 export const routeList = [
   {
@@ -15,12 +16,12 @@ export const routeList = [
     path: "/",
     component: Home,
   },
-    {
+  {
     title: "Button",
     path: "/button",
     component: ButtonPage,
   },
-      {
+  {
     title: "Toast",
     path: "/toast",
     component: ToastPage,
@@ -55,6 +56,11 @@ export const routeList = [
     title: "Modal",
     path: "/modal",
     component: ModalPage,
+  },
+  {
+    title: "Image Modal",
+    path: "/image-modal",
+    component: ImageModalPage,
   },
 ];
 
